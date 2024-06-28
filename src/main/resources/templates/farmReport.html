@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Report</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Farm Name</th>
+        <th>Crop Type</th>
+        <th>Actual</th>
+        <th>Expected</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="farm: ${farms}">
+            <td th:text="${farm.name}" />
+            <td th:text="${farm.crop}" />
+            <td th:text="${farm.expectedWeight}" />
+            <td th:text="${farm.actualWeight}" />
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
